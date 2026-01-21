@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<!-- Mirrored from imazeni.github.io/weksite//gav/hrs/hrs.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 19 Jan 2026 13:49:58 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقاطعة ويك</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <script src="../../../kit.fontawesome.com/a076d05399.html" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../../img/logo.gif" type="img/gif">
+    <script defer src="../../script.js"></script> <!-- ملف الجافا سكريبت للتحريك -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+
+        .video-container {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          overflow: hidden;
+          z-index: -1;
+        }
+      
+        .video-container iframe {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 120vw;
+          height: 67.5vw;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+          border: none;
+        }
+      
+        .hero-content {
+          z-index: 2;
+          color: white;
+          padding: 20px;
+        }
+      </style>
+    </head>
+<body>
+
+    <div class="planet-background">
+        <!-- الكواكب -->
+        <div class="planet planet1"></div>
+        <div class="planet planet2"></div>
+        <div class="planet planet3"></div>
+        <div class="planet planet4"></div>
+      
+        <!-- شعارات المقاطعة -->
+        <img src="../../img/logo.gif" class="floating-logo logo1" alt="شعار المقاطعة">
+        <img src="../../img/logo.gif" class="floating-logo logo2" alt="شعار المقاطعة">
+        <img src="../../img/logo.gif" class="floating-logo logo3" alt="شعار المقاطعة">
+
+        <!-- نجوم زرقاء -->
+   <div class="blue-star star1"></div>
+   <div class="blue-star star2"></div>
+   <div class="blue-star star3"></div>
+   <div class="blue-star star4"></div>
+   <div class="blue-star star5"></div>
+   <canvas id="particles-bg"></canvas>
+      </div>
+
+<!-- شريط التنقل الجديد -->
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../../index-2.html"><img src="../../img/logo.gif" alt="شعار الموقع"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../../index-2.html">الرئيسية</a></li>
+            <li><a href="../../store/store.html"class="activeKK">المتجر</a></li>
+            <li><a href="../../guide/guide.html">دليل المقاطعة</a></li>
+            <li><a href="../../rules/rules.html">القوانين</a></li>
+            <li><a href="../../jobs/jobs.html">تقديم الوظائف</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+</header>
+
+<section class="hero">
+  <div class="video-container">
+    <iframe 
+      src="https://player.vimeo.com/video/1069543475?autoplay=1&loop=1&autopause=0&muted=1&background=1" 
+      frameborder="0" 
+      allow="autoplay; fullscreen" 
+      allowfullscreen>
+    </iframe>
+  </div>
+  
+    <div class="overlay"></div>
+    
+    <div class="hero-content">
+        <h1>Wek Country <br>مجتمع مقاطعة ويك</h1>
+        <p>مديرية حرس الحدود</p>
+    </div>
+</section>
+
+<section class="sector-info">
+    <div class="container">
+        <div class="sector-section">
+            <h2>شروط التوظيف</h2>
+            <ul class="checklist green">
+                <li>✅ مستوى خبرة أعلى من 20</li>
+                <li>✅ الرسوم: المركبة 100 ألف </li>
+                <li>✅ توفر راديو قبل الحضور</li>
+                <li>✅  يكون عمر المتقدم 16 فما فوق</li>
+            </ul>
+        </div>
+
+        <div class="sector-section">
+            <h2>الملاحظات</h2>
+            <ul class="checklist red">
+                                <li>📌 الحضور للشرح النظري والتدريب الميداني <span class="red">إلزامي</span></li>
+                <li>📌 <span class="green">الالتزام</span> باللباس المعتمد</li>
+                <li>📌 الحضور في الموعد المحدد</li>
+                <li>📌 التفرغ الكامل حتى نهاية التدريب</li>
+                <li>📌 دفع كامل المخالفات وعدم وجود سجل سلبي</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<button id="scrollTopBtn" title="العودة للأعلى">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+
+    // إظهار الزر عند التمرير
+window.onscroll = function () {
+const btn = document.getElementById("scrollTopBtn");
+btn.style.display = window.scrollY > 300 ? "flex" : "none";
+};
+
+// الرجوع للأعلى بسلاسة
+document.getElementById("scrollTopBtn").onclick = () => {
+window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+  </script>

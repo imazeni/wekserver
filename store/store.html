@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقاطعة ويك | المتجر</title>
+    
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="../img/logo.gif" type="image/gif">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        /* إصلاح تموضع الفوتر */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* حاوية أساسية تجعل الفوتر يثبت في الأسفل */
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* المحتوى يتمدد ليدفع الفوتر */
+        .content-area {
+            flex: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.7); /* خلفية شبه شفافة لتناسب التصميم */
+            color: #fff;
+            width: 100%;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* ضمان بقاء الخلفية تحت كل شيء */
+        .planet-background {
+            position: fixed; /* تغيير لـ fixed لضمان استقرارها خلف المحتوى */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        #scrollTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 20px; /* بما أن الموقع RTL الزر يكون جهة اليسار أو حسب رغبتك */
+            z-index: 99;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    </style>
+
+    <meta name="title" content="مقاطعة ويك | Wek County">
+    <meta name="description" content="انضم إلى مجتمع ويك، أقوى سيرفر حياة واقعية وتمثيل أدوار في العالم العربي.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://imazeni.github.io/weksite/">
+    <meta property="og:title" content="مقاطعة ويك | Wek County">
+    <meta property="og:description" content="انضم إلى مجتمع ويك، أقوى سيرفر حياة واقعية وتمثيل أدوار في العالم العربي.">
+    <meta property="og:image" content="../img/logo.png">
+
+    <script defer src="../script.js"></script>
+</head>
+
+<body>
+
+    <div class="planet-background">
+        <div class="planet planet1"></div>
+        <div class="planet planet2"></div>
+        <div class="planet planet3"></div>
+        <div class="planet planet4"></div>
+        
+        <img src="../img/logo.gif" class="floating-logo logo1" alt="شعار">
+        <img src="../img/logo.gif" class="floating-logo logo2" alt="شعار">
+        <img src="../img/logo.gif" class="floating-logo logo3" alt="شعار">
+
+        <div class="blue-star star1"></div>
+        <div class="blue-star star2"></div>
+        <div class="blue-star star3"></div>
+        <div class="blue-star star4"></div>
+        <div class="blue-star star5"></div>
+        <canvas id="particles-bg"></canvas>
+    </div>
+
+    <div class="page-wrapper">
+        
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="../index-2.html"><img src="../img/logo.gif" alt="شعار"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../index-2.html">الرئيسية</a></li>
+                    <li><a href="store.html" class="activeKK">المتجر</a></li>
+                    <li><a href="../guide/guide.html">دليل المقاطعة</a></li>
+                    <li><a href="../rules/rules.html">القوانين</a></li>
+                    <li><a href="../jobs/jobs.html">تقديم الوظائف</a></li>
+                </ul>
+                <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+            </nav>
+        </header>
+
+        <div class="content-area">
+            <section class="store-banner">
+                <h1>مرحبًا بك في متجر مقاطعة ويك</h1>
+                <p>استعرض المنتجات المتاحة  واشترِ بكل سهولة!</p>
+            </section>
+
+            <section class="store-container">
+                <div class="store-section reveal">
+                    <h2><i class="fas fa-store"></i>متجر مقاطعة ويك</h2>
+                    <p>مجموعة من المنتجات المتنوعة المتاحة للجميع داخل السيرفر.</p>
+                    <a href="https://wek-county.tebex.io/?action=preview&signature=b0765eac474b5eba6b3a4f59d09b644bcbc49032ab76bec18fc0f3abddb1b2c7" class="store-button">تصفح المنتجات</a>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 جميع الحقوق محفوظة | مقاطعة ويك</p>
+        </footer>
+
+    </div> <button id="scrollTopBtn" title="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // إظهار الزر عند التمرير
+        window.onscroll = function () {
+            const btn = document.getElementById("scrollTopBtn");
+            if(window.scrollY > 300) {
+                btn.style.display = "flex";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        // الرجوع للأعلى
+        document.getElementById("scrollTopBtn").onclick = () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+
+        // قائمة الجوال
+        function toggleMenu() {
+            const nav = document.querySelector('.nav-links');
+            nav.classList.toggle('nav-active');
+        }
+    </script>
+</body>
+</html>
