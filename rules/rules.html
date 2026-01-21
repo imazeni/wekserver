@@ -107,6 +107,8 @@
       <li data-target="section4"><span class="tooltip">قوانين المشاركة</span></li>
       <li data-target="section5"><span class="tooltip">قوانين الميناء</span></li>
       <li data-target="section6"><span class="tooltip">قوانين الستريمر</span></li>
+      <li data-target="section8"><span class="tooltip">الرقابه والتفتيش</span></li>
+      <li data-target="section10"><span class="tooltip">قوانين العوائل</span></li>
       <li data-target="section7"><span class="tooltip">قوانين الدسكورد</span></li>
 
     </ul>
@@ -250,7 +252,7 @@
       </table>
     </div>
 
-    <div id="section7" class="violation-category">
+    <div id="section8" class="violation-category">
       <h3 class="category-title">الرقابه والتفتيش</h3>
       <table class="violation-table">
         <thead>
@@ -263,7 +265,18 @@
       </table>
     </div>
 
-
+  <div id="section10" class="violation-category">
+      <h3 class="category-title">قوانين العوائل</h3>
+      <table class="violation-table">
+        <thead>
+          <tr>
+            <th>رقم</th>
+            <th>الوصف</th>
+          </tr>
+        </thead>
+        <tbody id="laws-body-family"></tbody>
+      </table>
+    </div>
 
     <!-- كرر نفس الصيغة لبقية الأقسام الثابتة -->
     
@@ -294,6 +307,7 @@ const lawSections = {
   "قوانين الستريمر": "laws-body-streamer",
   "قوانين الدسكورد": "laws-body-discord",
   "الرقابه والتفتيش": "laws-body-raqabeh",
+  "قوانين العوائل": "laws-body-family",
   "تنويهات عامة": "laws-body-general"
 
 };
@@ -347,4 +361,5 @@ function toggleMenu() {
 
 <!-- Mirrored from imazeni.github.io/weksite//rules/rules.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 19 Jan 2026 13:49:57 GMT -->
 </html>
+
 
